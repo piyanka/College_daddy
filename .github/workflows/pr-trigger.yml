@@ -1,0 +1,23 @@
+name: PR Trigger
+
+on:
+  pull_request_target:
+    types: [opened, closed]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch PR event to handler
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          repository: mugenkyou/College_daddy
+          event-type: pr_event
+          client-payload: |
+            {
+              "pr_number": "${{ github.event.pull_request.number }}",
+              "action": "${{ github.event.action }}",
+              "merged": "${{ github.event.pull_request.merged }}"
+            }
+
