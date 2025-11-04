@@ -54,7 +54,16 @@ function displayBranches(semesterId) {
 
 function displaySubjects(semesterId, branchId, branchName) {
     const semester = window.notesData.semesters.find(s => s.id === semesterId);
-    const branch = semester.branches.find(b => b.name.toLowerCase() === branchName.toLowerCase());
+    const branch = semester.branches?.find(b => 
+        b?.name?.toLowerCase() === branchName?.toLowerCase()
+    );
+
+    if (!branch) {
+        console.warn(`No data found for branch: ${branchName}`);
+        showError('No notes available for this branch yet.');
+        return;
+    }
+
 
     const content = document.getElementById('content');
     content.innerHTML = '';
@@ -197,18 +206,3 @@ function addMaterial(semesterId, branchName, subjectName, newMaterial) {
     // Optionally save or update JSON file (depends on backend)
     console.log(`Added material "${newMaterial.title}" successfully.`);
 }
-
-// 🔧 TEMP TESTING
-document.addEventListener('DOMContentLoaded', async () => {
-    await loadData();
-    addMaterial(1, "PHYSICS CYCLE", "PHYSICS", {
-        title: "Physics Module 2 - Motion and Force (Handwritten)",
-        description: "Covers Newton’s laws and motion fundamentals.",
-        path: "/data/notes/semester-1/physics/physics-motion/lecture-2.pdf",
-        type: "pdf",
-        size: "2.1MB",
-        uploadDate: "2025-02-10",
-        downloadUrl: "/api/download?path=/data/notes/semester-1/physics/physics-motion/lecture-2.pdf",
-        keywords: ["physics", "motion"]
-});
-});
