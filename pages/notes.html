@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes Portal</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/navigation.css">
     <link rel="stylesheet" href="../assets/css/notes.css">
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        /* Correct Font Awesome v6 overrides */
-        .fas,
-        .far,
-        .fa {
+        /* Critical overrides for icons */
+        .fas, .far, .fa {
             display: inline-block !important;
             font-family: "Font Awesome 5 Free" !important;
             font-weight: 900 !important;
             font-style: normal !important;
         }
-
+        
         i.fab {
-            font-family: "Font Awesome 6 Brands" !important;
+            font-family: "Font Awesome 5 Brands" !important;
         }
-
-        /* Logo icon */
+        
         .logo i {
             color: #009dff !important;
             font-size: 1.5rem !important;
             margin-right: 8px !important;
-            vertical-align: middle;
         }
-
-        /* Optional icon styling */
+        
         .tool-card i {
             color: #009dff !important;
             font-size: 2.5rem !important;
             margin-bottom: 1rem !important;
         }
-
+        
         .download-btn {
             display: flex !important;
             align-items: center !important;
         }
-
+        
         .download-btn i {
             margin-right: 8px !important;
         }
     </style>
-feature/universal-navbar
-
-
     <!-- Theme initialization script - runs before page render to prevent flash -->
     <script>
       (function() {
@@ -62,13 +53,8 @@ feature/universal-navbar
         }
       })();
     </script>
-main
 </head>
-
 <body>
- feature/universal-navbar
-
-
     <header>
         <div class="nav-container">
             <a href="../index.html" class="logo" aria-label="College Daddy Home">
@@ -95,7 +81,6 @@ main
             </nav>
         </div>
     </header>
-main
     <nav>
         <h1>Notes Portal</h1>
         <input type="search" id="searchInput" placeholder="Search notes...">
@@ -107,11 +92,11 @@ main
         <!-- Content will be loaded dynamically -->
     </main>
 
+    <script src="../assets/js/components/navigation.js" defer></script>
     <script src="../assets/js/pages/notes/notes-utils.js"></script>
     <script src="../assets/js/pages/notes/notes-navigation.js"></script>
     <script src="../assets/js/pages/notes/notes-search.js"></script>
     <script src="../assets/js/pages/notes/notes-main.js"></script>
-    <script src="../assets/js/components/navigation.js" defer></script>
 
     <footer class="footer">
         <div class="footer-content">
@@ -119,19 +104,17 @@ main
                 <h3>College Daddy</h3>
                 <p>Your ultimate companion for academic success.</p>
                 <p class="tagline">Developed with students in mind, for students by a student.</p>
-
+                
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/company/collegedaddy-tech" target="_blank" class="social-link"
-                        aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/collegedaddy-tech" target="_blank" class="social-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/mugenkyou/College_daddy" target="_blank" class="social-link"
-                        aria-label="GitHub">
+                    <a href="https://github.com/mugenkyou/College_daddy" target="_blank" class="social-link" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
             </div>
-
+            
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
@@ -141,23 +124,24 @@ main
                     <li><a href="../pages/roadmap.html">College Daddy Roadmap</a></li>
                 </ul>
             </div>
-
+            
             <div class="footer-section">
                 <h3>Connect</h3>
-                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSciD1CUiYUpiz4mtQSTYG9XeCRyG3CEhr9GNL03WxmRbFOgkw/viewform?usp=dialog"
-                        target="_blank" class="feedback-link">Send Feedback to College Daddy</a></p>
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSciD1CUiYUpiz4mtQSTYG9XeCRyG3CEhr9GNL03WxmRbFOgkw/viewform?usp=dialog" target="_blank" class="feedback-link">Send Feedback to College Daddy</a></p>
                 <p><!-- Follow our journey on <a href="https://www.linkedin.com/company/collegedaddy-tech/" target="_blank" style="color: var(--primary-color); text-decoration: none;">LinkedIn</a> for updates and resources. -->
-                    Follow our journey on social media for updates and resources.</p>
+Follow our journey on social media for updates and resources.</p>
             </div>
         </div>
-
+        
         <div class="footer-bottom">
-            <p>&copy; 2025 College Daddy. All rights reserved. Developed by <span class="developer-name">Sachin</span>
-            </p>
+            <p>&copy; 2025 College Daddy. All rights reserved. Developed by <span class="developer-name">Sachin</span></p>
         </div>
     </footer>
-    <script src="../assets/js/navbar.js"></script>
-
 </body>
-
 </html>
+
+
+
+
+
+
