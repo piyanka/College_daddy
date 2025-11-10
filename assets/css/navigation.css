@@ -54,7 +54,9 @@ body > header .nav-container {
 body > header .nav-actions {
     display: flex !important;
     align-items: center !important;
+    justify-content: center !important;
     gap: 1rem !important;
+    height: 100% !important;
 }
 
 /* Theme Toggle Button */
@@ -72,8 +74,12 @@ body > header .theme-toggle {
     color: var(--primary-color) !important;
     font-size: 1.2rem !important;
     padding: 0 !important;
+    margin: 0 !important;
     position: relative !important;
     overflow: hidden !important;
+    vertical-align: middle !important;
+    flex-shrink: 0 !important;
+    order: 999 !important; /* Ensure it's always last */
 }
 
 body > header .theme-toggle:hover {
@@ -88,9 +94,16 @@ body > header .theme-toggle:active {
 }
 
 body > header .theme-toggle .theme-icon {
-    display: inline-block !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     transition: transform var(--transition-speed) ease !important;
     line-height: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
 }
 
 body > header .theme-toggle:hover .theme-icon {
@@ -135,6 +148,7 @@ body > header .logo span {
 /* Navigation Links */
 body > header .nav-links {
     display: flex !important;
+    align-items: center !important;
     gap: 1.5rem !important;
     transition: transform var(--transition-speed) ease !important;
     margin: 0 !important;
@@ -151,6 +165,12 @@ body > header .nav-link {
     overflow: hidden !important;
     text-decoration: none !important;
     display: inline-block !important;
+}
+
+/* Theme toggle when inside nav-links */
+body > header .nav-links .theme-toggle {
+    margin-left: 0.5rem !important;
+    flex-shrink: 0 !important;
 }
 
 body > header .nav-link::before {
@@ -189,6 +209,12 @@ body > header .menu-button {
     cursor: pointer !important;
     z-index: 1002 !important;
     padding: 0.5rem !important;
+    margin: 0 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 1 !important;
 }
 
 /* Nav Overlay for Mobile */
@@ -238,11 +264,24 @@ body > header .menu-button {
         width: 36px !important;
         height: 36px !important;
         font-size: 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    body > header .theme-toggle .theme-icon {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: 100% !important;
     }
     
     body > header .menu-button {
-        display: block !important;
+        display: flex !important;
         margin-right: 0 !important; /* Ensure proper alignment */
+        align-items: center !important;
+        justify-content: center !important;
     }
     
     body > header .nav-links {
@@ -259,6 +298,15 @@ body > header .menu-button {
         z-index: 1001 !important;
         border-left: 1px solid var(--border-color) !important;
         margin: 0 !important; /* Reset margin */
+        align-items: stretch !important;
+    }
+    
+    body > header .nav-links .theme-toggle {
+        margin-left: 0 !important;
+        margin-top: auto !important;
+        margin-bottom: 1rem !important;
+        align-self: center !important;
+        order: 999 !important;
     }
     
     body > header .nav-links.active {
