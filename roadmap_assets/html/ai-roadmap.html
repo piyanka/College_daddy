@@ -310,13 +310,14 @@ Follow our journey on social media for updates and resources.</p>
     </footer>
 
 
-<script>document.addEventListener("DOMContentLoaded", function () {
+<script>
+document.addEventListener("DOMContentLoaded", function () {
     const faqItems = document.querySelectorAll(".faq-item h3");
     
     faqItems.forEach(item => {
         item.addEventListener("click", function () {
-            const answer = this.nextElementSibling;
-            const isActive = answer.style.display === "block";
+            const answerContainer = this.nextElementSibling;
+            const isCurrentlyActive = answerContainer.style.display === "block";
             
             // Hide all answers
             document.querySelectorAll(".faq-item div[itemprop='acceptedAnswer']").forEach(ans => {
@@ -324,7 +325,9 @@ Follow our journey on social media for updates and resources.</p>
             });
             
             // Toggle the clicked answer
-            answer.style.display = isActive ? "none" : "block";
+           if (!isCurrentlyActive) {
+                answerContainer.style.display = "block";
+            }
         });
     });
 });</script>

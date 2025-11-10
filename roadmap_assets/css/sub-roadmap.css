@@ -1003,16 +1003,9 @@ input[type="checkbox"]:checked::after {
     padding: 0 var(--spacing-md) var(--spacing-md);
     color: var(--text-light);
     line-height: 1.6;
+    display: none;
 }
 
-/* Hide answer by default (for CSS-only toggle) */
-.faq-item div[itemprop="acceptedAnswer"] {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height var(--transition-speed);
-    padding-top: 0;
-    padding-bottom: 0;
-}
 
 /* Show answer when active class is applied */
 .faq-item.active div[itemprop="acceptedAnswer"] {
