@@ -97,39 +97,16 @@ body::before {
 /* hero section has been transformed from here to a separate file */
 
 /*** About Section ***/
-.about-college-daddy {
-  padding: 3rem 1.5rem;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.about-college-daddy::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--primary-color),
-    transparent
-  );
-  transform: translateX(-50%);
-}
-
-.about-college-daddy h2 {
+.about-title {
   color: var(--primary-color);
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
+  font-size: 2.8rem;
+  font-weight: 700; 
+  margin-bottom: 1.5rem;
 }
 
-.about-college-daddy h2::after {
+.about-title::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -144,18 +121,125 @@ body::before {
   );
 }
 
-.about-college-daddy p {
-  font-size: 1.1rem;
+.about-subtitle {
+  font-size: 1.3rem;
+  color: #ffcc00;
   line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 30px;
   transition: all 0.5s ease;
 }
 
-.about-college-daddy:hover p {
+.about-subtitle:hover {
   transform: scale(1.01);
+}
+[data-theme="light"] .about-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 30px rgba(0, 102, 204, 0.1);
+  border: 1px solid var(--border-light);
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+.mission-block {
+  border-left: 4px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 700px;
+  margin: 40px auto;
+  transition: all 0.3s ease;
+}
+.mission-block:hover { 
+  box-shadow: 0 4px 12px rgba(120, 143, 221, 0.3);
+}
+.mission-block h3 {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+.about-highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 50px;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  width: 280px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+[data-theme="light"] .highlight-card {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+[data-theme="light"] .highlight-card:hover {
+  background: rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.highlight-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.highlight-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.highlight-card h3 {
+  margin-bottom: 10px;
+}
+
+.highlight-card p {
+  font-size: 0.95rem;
+}
+
+.about-buttons {
+  margin-top: 40px;
+}
+.btn-primary, .btn-secondary {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  margin-right: 10px;
+}
+.btn-primary:hover {
+  background: var(--primary-color);
+}
+.btn-secondary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: #fff;
 }
 
 /*** Features Section ***/
-.features {
+.features,
+.about-section {
   max-width: 1200px;
   margin: 40px auto;
   padding: 3rem 1.5rem;
@@ -164,7 +248,8 @@ body::before {
   box-shadow: 0 0 30px rgba(0, 157, 255, 0.1);
   position: relative;
   overflow: hidden;
-  transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
 }
 
 [data-theme="light"] .features {
@@ -173,7 +258,8 @@ body::before {
   border: 1px solid var(--border-light);
 }
 
-.features::before {
+.features::before,
+.about-section::before {
   content: "";
   position: absolute;
   top: 0;
@@ -338,7 +424,8 @@ body::before {
   position: relative;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 157, 255, 0.1);
-  transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease,
+    box-shadow var(--transition-speed) ease;
 }
 
 [data-theme="light"] .faq-section {
@@ -621,7 +708,8 @@ body::before {
   color: var(--text-light);
   padding: 3rem 1.5rem 1.5rem;
   margin-top: 4rem;
-  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  transition: background-color var(--transition-speed) ease,
+    color var(--transition-speed) ease;
 }
 
 .footer-content {
@@ -860,5 +948,3 @@ body::before {
   scrollbar-width: thin;
   scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.02);
 }
-
-

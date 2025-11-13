@@ -111,16 +111,19 @@
     <!-- Web font for hero/title -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <!-- Theme initialization script - runs before page render to prevent flash -->
     <script>
-      (function() {
+      (function () {
         try {
-          const theme = localStorage.getItem('theme') || 'dark';
-          document.documentElement.setAttribute('data-theme', theme);
+          const theme = localStorage.getItem("theme") || "dark";
+          document.documentElement.setAttribute("data-theme", theme);
         } catch (e) {
           // localStorage not available, use default
-          document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.setAttribute("data-theme", "dark");
         }
       })();
     </script>
@@ -160,11 +163,10 @@
     </header>
 
     <section class="hero">
-      <h1>
-        College Daddy: The Ultimate Student Toolkit
-      </h1>
+      <h1>College Daddy: The Ultimate Student Toolkit</h1>
       <p class="subheading">
-        CGPA Calculator , Study Planner & Expert Roadmaps
+        <span id="changingText"></span>
+        <span class="cursor">|</span>
       </p>
       <p class="tagline">
         <strong
@@ -206,20 +208,77 @@
       <p>Your guided path to mastering tech careers like AI, Full Stack, and more with College Daddy's roadmaps!</p>
     </div>
 
+<section class="features">
+  <div class="features-container">
+
+    <!-- Feature: Student Resources -->
     <div class="feature-card" data-aos="fade-up" data-aos-delay="500" data-url="https://www.indiabix.com/">
       <div class="feature-icon">🧠</div>
       <h3>Student Resources</h3>
       <p>Sharpen your problem-solving skills with College Daddy's best aptitude resources!</p>
     </div>
 
+    <!-- Feature: CP & DSA Resources -->
     <div class="feature-card" data-aos="fade-up" data-aos-delay="600" data-url="pages/cpdsa.html">
       <div class="feature-icon">💻</div>
       <h3>CP & DSA Resources</h3>
       <p>Explore top platforms, tutorials, and practice sites for mastering Competitive Programming and Data Structures & Algorithms.</p>
     </div>
+
   </div>
 </section>
 
+<!-- about section -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <h2 class="about-title">About College Daddy</h2>
+    <p class="about-subtitle">Empowering Students, Simplifying Success</p>
+    <p class="about-text">
+      College Daddy is your all-in-one toolkit built to help students plan,
+      calculate, and excel in their academic journey. From tracking your
+      <strong>CGPA</strong> and managing your <strong>study schedule</strong> to accessing
+      <strong>expert-curated roadmaps</strong>, everything you need is just a click away.
+    </p>
+    <p class="about-text">
+      Our mission is simple — to make college life easier, smarter, and more
+      organized. Developed <em>with students in mind</em>, and <em>by a student</em>,
+      College Daddy is designed to bridge the gap between learning and productivity.
+    </p>
+
+    <div class="mission-block">
+      <h3>🎯 Our Mission</h3>
+      <p>
+        To help every student stay on top of their academics by combining
+        technology, design, and guidance — making education less stressful
+        and more achievable.
+      </p>
+    </div>
+
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Smart Learning Tools</h3>
+        <p>Access calculators, planners, and trackers tailored for student needs.</p>
+      </div>
+      <div class="highlight-card">
+        <i class="fas fa-lightbulb"></i>
+        <h3>AI-Powered Insights</h3>
+        <p>Get smarter study recommendations and progress analytics.</p>
+      </div>
+      <div class="highlight-card">
+        <i class="fas fa-map"></i>
+        <h3>Expert Roadmaps</h3>
+        <p>Follow guided paths to master new skills and subjects efficiently.</p>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="about-buttons">
+      <a href="../College_daddy/pages/cgpa.html" class="btn-primary">Explore Tools</a>
+      <a href="#footerSec" class="btn-secondary">Join Community</a>
+    </div>
+  </div>
+</section>
 
     <section class="testimonials">
       <h2>Why Students Love College Daddy</h2>
@@ -374,49 +433,73 @@
       </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>College Daddy</h3>
-                <p>Your ultimate companion for academic success.</p>
-                <p class="tagline">Developed with students in mind, for students by a student.</p>
-                
-                <div class="social-links">
-                    <a href="https://www.instagram.com/collegedaddy.tech/" target="_blank" class="social-link" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <!-- LinkedIn link commented out
+    <footer class="footer" id="footerSec">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>College Daddy</h3>
+          <p>Your ultimate companion for academic success.</p>
+          <p class="tagline">
+            Developed with students in mind, for students by a student.
+          </p>
+
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/collegedaddy.tech/"
+              target="_blank"
+              class="social-link"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <!-- LinkedIn link commented out
                     <a href="https://www.linkedin.com/company/collegedaddy-tech/" target="_blank" class="social-link" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     -->
-                    <a href="https://github.com/collegedaddy" target="_blank" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">College Daddy Home</a></li>
-                    <li><a href="pages/cgpa.html">College Daddy CGPA Calculator</a></li>
-                    <li><a href="pages/notes.html">College Daddy Notes</a></li>
-                    <li><a href="pages/roadmap.html">College Daddy Roadmap</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Connect</h3>
-                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSciD1CUiYUpiz4mtQSTYG9XeCRyG3CEhr9GNL03WxmRbFOgkw/viewform?usp=dialog" target="_blank" class="feedback-link">Send Feedback to College Daddy</a></p>
-                <p><!-- Follow our journey on <a href="https://www.linkedin.com/company/collegedaddy-tech/" target="_blank" style="color: var(--primary-color); text-decoration: none;">LinkedIn</a> for updates and resources. -->
-Follow our journey on social media for updates and resources.</p>
-            </div>
+            <a
+              href="https://github.com/collegedaddy"
+              target="_blank"
+              class="social-link"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 College Daddy. All rights reserved. Developed by <span class="developer-name">Sachin</span></p>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">College Daddy Home</a></li>
+            <li><a href="pages/cgpa.html">College Daddy CGPA Calculator</a></li>
+            <li><a href="pages/notes.html">College Daddy Notes</a></li>
+            <li><a href="pages/roadmap.html">College Daddy Roadmap</a></li>
+          </ul>
         </div>
+
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <p>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSciD1CUiYUpiz4mtQSTYG9XeCRyG3CEhr9GNL03WxmRbFOgkw/viewform?usp=dialog"
+              target="_blank"
+              class="feedback-link"
+              >Send Feedback to College Daddy</a
+            >
+          </p>
+          <p>
+            <!-- Follow our journey on <a href="https://www.linkedin.com/company/collegedaddy-tech/" target="_blank" style="color: var(--primary-color); text-decoration: none;">LinkedIn</a> for updates and resources. -->
+            Follow our journey on social media for updates and resources.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 College Daddy. All rights reserved. Developed by
+          <span class="developer-name">Sachin</span>
+        </p>
+      </div>
     </footer>
 
     <script

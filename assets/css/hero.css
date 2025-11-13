@@ -115,7 +115,17 @@
   font-weight: 500;
   margin-bottom: 0.75rem;
   color: #e2e2e2;
+  text-align: center;
   transition: color var(--transition-speed, 0.3s) ease;
+}
+.cursor{
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink{
+  50%{
+    opacity: 0;
+  }
 }
 
 [data-theme="light"] .hero .subheading {
